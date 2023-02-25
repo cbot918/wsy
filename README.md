@@ -3,7 +3,6 @@
 ### websocket library written in go ( implementing )
 
 <br/>
-<br/>
 
 # Run
 
@@ -15,7 +14,6 @@ go run .
 
 ### 開啟 index.html (可以方便用 live server 啟動)
 
-<br/>
 <br/>
 
 # Env

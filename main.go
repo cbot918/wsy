@@ -5,8 +5,11 @@ import (
 )
 
 func main(){
+	
+	
+
 	w := wsy.New()
-	w.Listen()
-	w.ParseJson()
+	w.Run()
+	// w.ParseJson()
 	// w.PrintChar(20)
 }

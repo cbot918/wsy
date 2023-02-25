@@ -4,20 +4,20 @@
 
 <br/>
 
-# Run
+## Run
 
-### 啟動 wsy
+#### 啟動 wsy
 
 ```
 go run .
 ```
 
-### 開啟 index.html (可以方便用 live server 啟動)
+#### 開啟 index.html (可以方便用 live server 啟動)
 
 <br/>
 
-# Env
+## Env
 
-### 測試環境: win10-wsl2
+#### 測試環境: win10-wsl2
 
-### 預設 port: 2346
+#### 預設 port: 2346

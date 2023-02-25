@@ -11,11 +11,11 @@ type Wsy struct {
 	listener 						net.Listener
 }
 
-func New() *Wsy{
+func New(port string) *Wsy{
 	w := new(Wsy)
-	l, err := net.Listen("tcp", "localhost:2346")
+	l, err := net.Listen("tcp", "localhost:"+port)
 	u.Checke(err, "net listen failed")
-	fmt.Println("[*] welcome to wsy")
+	fmt.Println("[*] ws-server listening: "+port)
 	w.listener = l
 	return w
 }
@@ -38,10 +38,12 @@ func (w *Wsy) Run() string {
 			fmt.Println("[*] ws upgrade success!")
 
 			res := ch.ReadSocket()												// 寫死: 預設web會發一個message過來
-			fmt.Println("[*] receved message")
+			fmt.Printf("[*] receved message\n\n")
 
 			message := ch.DecodeFrame(res)								// 根據Spec解碼Frame把message取出來
-			fmt.Println("message: ", string(message))
+			var Green  = "\033[32m"
+			var Reset  = "\033[0m"
+			fmt.Printf("\nclient: %s%s%s\n", Green,string(message),Reset)
 
 		}(conn)
 	}

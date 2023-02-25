@@ -6,9 +6,9 @@ import (
 
 func main(){
 	
+	port := "2346"
 	
-
-	w := wsy.New()
+	w := wsy.New(port)
 	w.Run()
 	// w.ParseJson()
 	// w.PrintChar(20)

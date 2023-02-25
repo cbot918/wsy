@@ -48,27 +48,3 @@ func (w *Wsy) Run() string {
 		}(conn)
 	}
 }
-
-
-
-
-
-
-
-
-
-// func (w *Wsy) GetMessage() string {
-	
-// }
-
-
-// func (c *ConnHandler) PrintChar(count int){
-// 	i := 0
-// 	for _, ch := range w.FirstRequest {
-// 		i ++
-// 		fmt.Printf("%q\n",string(ch))
-// 		if i >= count{
-// 			os.Exit(1)
-// 		}
-// 	}
-// }

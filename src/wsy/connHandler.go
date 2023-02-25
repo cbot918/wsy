@@ -97,8 +97,6 @@ func (c *ConnHandler) DecodeFrame(data []byte) []byte {
 	return result
 }
 
-
-
 // parse first upgrade request and get SecKey
 func (c *ConnHandler) parseJson(firstRequest string) []string{
 	var secWebSocketKey []string

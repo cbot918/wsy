@@ -3,12 +3,32 @@
   <head>
     <title>Websocket Client</title>
   </head>
+
   <body>
+    <div id="app">
+      發送訊息: 
+      <input 
+        id="in" 
+        type="text"
+        onkeydown="((e)=>{
+          if (e.key==='Enter'){
+            const m = 'Can you hear me?'
+            sendMessage(ws, e.target.value)
+            e.target.value=''
+          }
+        })(event)" 
+      >
+    </div>
+
     <script>
+      function sendMessage(ws, message){
+        ws.send(message)
+      }
+      window.ws = {}
       var socket = new WebSocket("ws://localhost:2346");
       socket.onopen = function (event) {
+        ws = socket
         console.log("socket opened");
-        socket.send("Can you hear me?");
       };
       socket.onmessage = function (event) {
         console.log(event.data);
